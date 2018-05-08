@@ -1,0 +1,16 @@
+{{#ui-header as |props|}}
+  {{header-markup props=props}}
+{{/ui-header}}
+{{#ui-section}}
+  <input type="checkbox" class="toggle-all" value="on">
+  {{#todo-list as |todos|}}
+    {{#each-in todos as |key todo|}}
+      {{#todo-item todo=todo as |props|}}
+        {{todo-markup todo=todo props=props}}
+      {{/todo-item}}
+    {{/each-in}}
+  {{/todo-list}}
+{{/ui-section}}
+{{#ui-footer as |props|}}
+  {{footer-markup props=props}}
+{{/ui-footer}}
