@@ -6,7 +6,8 @@ import { getOwner } from '@ember/application';
 
 const getReducerModule = function(modulePath, modulePrefix) {
   const fileNamePattern = new RegExp('(.*)/app/reducers/(.*)');
-  const match = fileNamePattern.exec(modulePath);
+  const standardModulePath = modulePath.split('\\').join('/');
+  const match = fileNamePattern.exec(standardModulePath);
   if (match && match.length === 3) {
     const reducer = match[2].replace('.js', '');
     return `${modulePrefix}/reducers/${reducer}`;
