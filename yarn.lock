@@ -2441,6 +2441,12 @@ ember-qunit@^3.3.2:
     ember-cli-test-loader "^2.2.0"
     qunit "^2.5.0"
 
+ember-redux-hot-loader@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/ember-redux-hot-loader/-/ember-redux-hot-loader-0.1.0.tgz#3f8f70037c15d947547a727a754d8f0c7913033d"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-redux-shim@^2.5.0:
   version "2.5.1"
   resolved "https://registry.npmjs.org/ember-redux-shim/-/ember-redux-shim-2.5.1.tgz#89166f00d49c2f1423e0b21029a02476ca563ddb"
