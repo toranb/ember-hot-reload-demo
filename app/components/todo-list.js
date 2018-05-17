@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { connect } from 'ember-redux';
-import { getTodos } from '../reducers/todos';
+import { getTodos } from '../reducers/todos/selectors';
 
 const stateToComputed = state => ({
   todos: getTodos(state)

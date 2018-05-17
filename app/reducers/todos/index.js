@@ -1,8 +1,5 @@
 import _ from 'lodash';
-import reselect from 'reselect';
-import * as types from '../actions/types';
-
-const { createSelector } = reselect;
+import * as types from 'todomvc/actions/types';
 
 const initialState = {
   filter: undefined,
@@ -98,21 +95,3 @@ export default function todos(state, action) {
     }
   }
 }
-
-const all = state => state.todos.all;
-const filter = state => state.todos.filter;
-
-export const getTodos = createSelector(
-  all,
-  filter,
-  (all, filter) => {
-    return _.omitBy(all, todo => {
-      return filter === undefined ? false : filter !== todo.completed;
-    });
-  }
-);
-
-export const getAllTodosCount = createSelector(all, (all) => Object.values(all).length);
-export const getFilter = createSelector(filter, filter => filter);
-export const getTodosCount = createSelector(getTodos, (todos) => Object.values(todos).length);
-export const getCompletedCount = createSelector(all, (all) => Object.values(all).filter(t => t.completed).length);

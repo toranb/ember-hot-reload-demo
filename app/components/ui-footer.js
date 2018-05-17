@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { connect } from 'ember-redux';
-import { getFilter, getTodosCount, getCompletedCount, getAllTodosCount } from '../reducers/todos';
+import { getFilter, getTodosCount, getCompletedCount, getAllTodosCount } from '../reducers/todos/selectors';
 import { clearCompleted, showAll, showActive, showCompleted } from '../actions/todos';
 
 const stateToComputed = state => ({
