@@ -1,4 +1,7 @@
-import _ from 'lodash';
+import omitBy from 'lodash/omitBy';
+import omit from 'lodash/omit';
+import mapValues from 'lodash/mapValues';
+import defaults from 'lodash/defaults';
 import * as types from 'todomvc/actions/types';
 
 const initialState = {
@@ -15,7 +18,7 @@ const initialState = {
 export default function todos(state, action) {
   switch (action.type) {
     case types.CLEAR_COMPLETED: {
-      let todos = _.omitBy(state.all, todo => todo.completed === true);
+      let todos = omitBy(state.all, todo => todo.completed === true);
       return {
         ...state,
         all: todos
@@ -44,7 +47,7 @@ export default function todos(state, action) {
     }
 
     case types.DELETE_TODO: {
-      let todos = _.omit(state.all, [action.id]);
+      let todos = omit(state.all, [action.id]);
       return {
         ...state,
         all: todos
@@ -52,8 +55,8 @@ export default function todos(state, action) {
     }
 
     case types.EDIT_TODO: {
-      let todos = _.mapValues(state.all, todo => {
-        return todo.id === action.id ? _.defaults({
+      let todos = mapValues(state.all, todo => {
+        return todo.id === action.id ? defaults({
           text: action.text
         }, todo) : todo;
       });
@@ -64,8 +67,8 @@ export default function todos(state, action) {
     }
 
     case types.COMPLETE_TODO: {
-      let todos = _.mapValues(state.all, todo => {
-        return todo.id === action.id ? _.defaults({
+      let todos = mapValues(state.all, todo => {
+        return todo.id === action.id ? defaults({
           completed: !todo.completed
         }, todo) : todo;
       });

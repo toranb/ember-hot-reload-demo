@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import omitBy from 'lodash/omitBy';
 import reselect from 'reselect';
 
 const { createSelector } = reselect;
@@ -10,7 +10,7 @@ export const getTodos = createSelector(
   all,
   filter,
   (all, filter) => {
-    return _.omitBy(all, todo => {
+    return omitBy(all, todo => {
       return filter === undefined ? false : filter !== todo.completed;
     });
   }
