@@ -25,6 +25,7 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV['ember-cli-hot-loader'] = {
+      excluded: ['liquid-unless', 'liquid-child'],
       supportedTypes: ['components', 'reducers']
     }
   }
