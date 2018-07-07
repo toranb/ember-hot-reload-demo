@@ -1,5 +1,7 @@
 <h1>todos</h1>
 
+{{#link-to "foo" current-when="foo"}}foo{{/link-to}}
+
 {{#liquid-unless isCollapsed use='crossFade'}}
 <form {{action (pipe (action props.addTodo props.text) (action (mut props.text) "")) on="submit"}}>
   <input type="text" class="new-todo" placeholder="What needs to be done?" value={{props.text}} oninput={{action (mut props.text) value="target.value"}} autofocus>
