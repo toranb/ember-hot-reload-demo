@@ -25,6 +25,7 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV['ember-cli-hot-loader'] = {
+      tagless: true,
       supportedTypes: ['components', 'reducers']
     }
   }

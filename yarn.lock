@@ -1918,12 +1918,13 @@ ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
 
-ember-cli-hot-loader@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/ember-cli-hot-loader/-/ember-cli-hot-loader-1.0.1.tgz#d06f10471b7a783bc9eaec0366ab7967356c450b"
+ember-cli-hot-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/ember-cli-hot-loader/-/ember-cli-hot-loader-1.1.0.tgz#631d3f2c44e2beab33b5928219b04537aa479227"
   dependencies:
     broccoli-stew "^1.5.0"
     ember-cli-babel "^6.6.0"
+    ember-get-config "^0.2.4"
 
 ember-cli-htmlbars-inline-precompile@^1.0.0:
   version "1.0.2"
@@ -2132,6 +2133,13 @@ ember-export-application-global@^2.0.0:
   resolved "https://registry.npmjs.org/ember-export-application-global/-/ember-export-application-global-2.0.0.tgz#8d6d7619ac8a1a3f8c43003549eb21ebed685bd2"
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
+
+ember-get-config@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.npmjs.org/ember-get-config/-/ember-get-config-0.2.4.tgz#118492a2a03d73e46004ed777928942021fe1ecd"
+  dependencies:
+    broccoli-file-creator "^1.1.1"
+    ember-cli-babel "^6.3.0"
 
 ember-load-initializers@^1.1.0:
   version "1.1.0"
