@@ -1918,9 +1918,9 @@ ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
 
-ember-cli-hot-loader@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/ember-cli-hot-loader/-/ember-cli-hot-loader-1.1.0.tgz#631d3f2c44e2beab33b5928219b04537aa479227"
+ember-cli-hot-loader@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/ember-cli-hot-loader/-/ember-cli-hot-loader-1.2.0.tgz#e12095097e99fa6a1779e4a509dbe1cf94147e8e"
   dependencies:
     broccoli-stew "^1.5.0"
     ember-cli-babel "^6.6.0"
