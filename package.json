@@ -42,7 +42,7 @@
     "ember-redux-thunk-shim": "^2.5.0",
     "ember-reselect-shim": "^2.0.0",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~3.4.1",
+    "ember-source": "~3.4.5",
     "ember-symbol-observable": "1.0.2",
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.0.0",
